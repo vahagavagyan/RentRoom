@@ -1,0 +1,540 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Header Files\States">
+      <UniqueIdentifier>{4cf49dca-abad-4b83-af0b-1f06fb18964b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Screens">
+      <UniqueIdentifier>{d3005604-435e-4b1e-9345-fdfcd800d235}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Screens">
+      <UniqueIdentifier>{2fe96410-463e-4d7e-a9ed-b220c7929d40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\States">
+      <UniqueIdentifier>{9f7fa9f0-5bb1-479e-b808-edfeba01ce62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UI">
+      <UniqueIdentifier>{a5ecb9a8-aae0-4cf1-87a8-d38256833012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI">
+      <UniqueIdentifier>{33ec404f-c4fb-4542-8c10-7b5fa820f72e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Network">
+      <UniqueIdentifier>{f90b4798-ffa1-47b3-9c5c-df8dd77ab26c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Network">
+      <UniqueIdentifier>{df7f6116-a284-4bcd-a13c-6c6fada3182a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Network\RequestDataTypes">
+      <UniqueIdentifier>{a8e8720c-46ed-4088-91ea-ac2387ea0108}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Network\RequestDataTypes">
+      <UniqueIdentifier>{a89d2ff9-4169-4d5b-81e9-cbf64bb0f134}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Network\ResponseDataTypes">
+      <UniqueIdentifier>{b18be900-fb6b-49f4-9910-cdcbf30c69b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Network\ResponseDataTypes">
+      <UniqueIdentifier>{8d9fa175-80c4-4c3f-912b-2fb286906948}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Entities">
+      <UniqueIdentifier>{14be52ad-9743-4247-b313-913ddd877fe9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Entities">
+      <UniqueIdentifier>{25f2bc68-117c-4bb2-9a62-b7933a7a1d50}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginScreen.cpp">
+      <Filter>Source Files\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="RoleSelectionScreen.cpp">
+      <Filter>Source Files\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="SignupScreen.cpp">
+      <Filter>Source Files\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="RoleSelectionState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="SignupState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="AuthenticationMethodUIElement.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientScreen.cpp">
+      <Filter>Source Files\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleBar.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="MapsView.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="MapsBridge.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkManager.cpp">
+      <Filter>Source Files\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkURL.cpp">
+      <Filter>Source Files\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="AdminState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="RealtorState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="AdminScreen.cpp">
+      <Filter>Source Files\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="RealtorScreen.cpp">
+      <Filter>Source Files\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="Options.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RentWidget.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Apartment.cpp">
+      <Filter>Source Files\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Realtor.cpp">
+      <Filter>Source Files\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Client.cpp">
+      <Filter>Source Files\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Admin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MarkerData.cpp">
+      <Filter>Source Files\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Request.cpp">
+      <Filter>Source Files\Network\RequestDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginRequest.cpp">
+      <Filter>Source Files\Network\RequestDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="SignupRequest.cpp">
+      <Filter>Source Files\Network\RequestDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="SignupResponse.cpp">
+      <Filter>Source Files\Network\ResponseDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="Response.cpp">
+      <Filter>Source Files\Network\ResponseDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="ListAvailableApartmentsRequest.cpp">
+      <Filter>Source Files\Network\RequestDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="ListAvailableApartmentsResponse.cpp">
+      <Filter>Source Files\Network\ResponseDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="RentRequest.cpp">
+      <Filter>Source Files\Network\RequestDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="RentResponse.cpp">
+      <Filter>Source Files\Network\ResponseDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="ListRealtorsRequest.cpp">
+      <Filter>Source Files\Network\RequestDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="MessageBox.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="PowerToolMenu.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="QProgressIndicator.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="SideMenu.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ListClientsRequest.cpp">
+      <Filter>Source Files\Network\RequestDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="ListClientsResponse.cpp">
+      <Filter>Source Files\Network\ResponseDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="ListRealtorsResponse.cpp">
+      <Filter>Source Files\Network\ResponseDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="ListApartmentsRequest.cpp">
+      <Filter>Source Files\Network\RequestDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="ListApartmentsResponse.cpp">
+      <Filter>Source Files\Network\ResponseDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="ListRealtorApartmentsRequest.cpp">
+      <Filter>Source Files\Network\RequestDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="ListRealtorApartmentsResponse.cpp">
+      <Filter>Source Files\Network\ResponseDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="DeleteApartmentRequest.cpp">
+      <Filter>Source Files\Network\RequestDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="DeleteClientRequest.cpp">
+      <Filter>Source Files\Network\RequestDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="DeleteApartmentResponse.cpp">
+      <Filter>Source Files\Network\ResponseDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="DeleteClientResponse.cpp">
+      <Filter>Source Files\Network\ResponseDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="DeleteRealtorResponse.cpp">
+      <Filter>Source Files\Network\ResponseDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="DeleteRealtorRequest.cpp">
+      <Filter>Source Files\Network\RequestDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateApartmentRequest.cpp">
+      <Filter>Source Files\Network\RequestDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateClientRequest.cpp">
+      <Filter>Source Files\Network\RequestDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateRealtorRequest.cpp">
+      <Filter>Source Files\Network\RequestDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="UpdateApartmentRequest.cpp">
+      <Filter>Source Files\Network\RequestDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="UpdateClientRequest.cpp">
+      <Filter>Source Files\Network\RequestDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="UpdateRealtorRequest.cpp">
+      <Filter>Source Files\Network\RequestDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateApartmentResponse.cpp">
+      <Filter>Source Files\Network\ResponseDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateClientResponse.cpp">
+      <Filter>Source Files\Network\ResponseDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateRealtorResponse.cpp">
+      <Filter>Source Files\Network\ResponseDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="UpdateApartmentResponse.cpp">
+      <Filter>Source Files\Network\ResponseDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="UpdateClientResponse.cpp">
+      <Filter>Source Files\Network\ResponseDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="UpdateRealtorResponse.cpp">
+      <Filter>Source Files\Network\ResponseDataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="ApartmentViewer.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ApartmentViewersContainter.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientViewersContainter.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientViewer.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="RealtorViewer.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="RealtorViewersContainer.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="MainWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Controller.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="LoginScreen.h">
+      <Filter>Header Files\Screens</Filter>
+    </QtMoc>
+    <QtMoc Include="RoleSelectionScreen.h">
+      <Filter>Header Files\Screens</Filter>
+    </QtMoc>
+    <QtMoc Include="RoleSelectionState.h">
+      <Filter>Header Files\States</Filter>
+    </QtMoc>
+    <QtMoc Include="LoginState.h">
+      <Filter>Header Files\States</Filter>
+    </QtMoc>
+    <QtMoc Include="SignupState.h">
+      <Filter>Header Files\States</Filter>
+    </QtMoc>
+    <QtMoc Include="AuthenticationMethodUIElement.h">
+      <Filter>Header Files\UI</Filter>
+    </QtMoc>
+    <QtMoc Include="SignupScreen.h">
+      <Filter>Header Files\Screens</Filter>
+    </QtMoc>
+    <QtMoc Include="ClientState.h">
+      <Filter>Header Files\States</Filter>
+    </QtMoc>
+    <QtMoc Include="ClientScreen.h">
+      <Filter>Header Files\Screens</Filter>
+    </QtMoc>
+    <QtMoc Include="TitleBar.h">
+      <Filter>Header Files\UI</Filter>
+    </QtMoc>
+    <QtMoc Include="MapsView.h">
+      <Filter>Header Files\UI</Filter>
+    </QtMoc>
+    <QtMoc Include="MapsBridge.h">
+      <Filter>Header Files\UI</Filter>
+    </QtMoc>
+    <QtMoc Include="NetworkManager.h">
+      <Filter>Header Files\Network</Filter>
+    </QtMoc>
+    <QtMoc Include="AdminState.h">
+      <Filter>Header Files\States</Filter>
+    </QtMoc>
+    <QtMoc Include="RealtorState.h">
+      <Filter>Header Files\States</Filter>
+    </QtMoc>
+    <QtMoc Include="RealtorScreen.h">
+      <Filter>Header Files\Screens</Filter>
+    </QtMoc>
+    <QtMoc Include="AdminScreen.h">
+      <Filter>Header Files\Screens</Filter>
+    </QtMoc>
+    <QtMoc Include="RentWidget.h">
+      <Filter>Header Files\UI</Filter>
+    </QtMoc>
+    <QtMoc Include="MessageBox.h">
+      <Filter>Header Files\UI</Filter>
+    </QtMoc>
+    <QtMoc Include="PowerToolMenu.h">
+      <Filter>Header Files\UI</Filter>
+    </QtMoc>
+    <QtMoc Include="QProgressIndicator.h">
+      <Filter>Header Files\UI</Filter>
+    </QtMoc>
+    <QtMoc Include="SideMenu.h">
+      <Filter>Header Files\UI</Filter>
+    </QtMoc>
+    <QtMoc Include="ApartmentViewer.h">
+      <Filter>Header Files\UI</Filter>
+    </QtMoc>
+    <QtMoc Include="ApartmentViewersContainter.h">
+      <Filter>Header Files\UI</Filter>
+    </QtMoc>
+    <QtMoc Include="ClientViewersContainter.h">
+      <Filter>Header Files\UI</Filter>
+    </QtMoc>
+    <QtMoc Include="ClientViewer.h">
+      <Filter>Header Files\UI</Filter>
+    </QtMoc>
+    <QtMoc Include="RealtorViewer.h">
+      <Filter>Header Files\UI</Filter>
+    </QtMoc>
+    <QtMoc Include="RealtorViewersContainer.h">
+      <Filter>Header Files\UI</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="RentRoom.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RentRoom.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="UserRole.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkURL.h">
+      <Filter>Header Files\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Options.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Apartment.h">
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Realtor.h">
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Client.h">
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="MarkerData.h">
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Request.h">
+      <Filter>Header Files\Network\RequestDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginRequest.h">
+      <Filter>Header Files\Network\RequestDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="SignupRequest.h">
+      <Filter>Header Files\Network\RequestDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginResponse.h">
+      <Filter>Header Files\Network\ResponseDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="SignupResponse.h">
+      <Filter>Header Files\Network\ResponseDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="Response.h">
+      <Filter>Header Files\Network\ResponseDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="ListAvailableApartmentsRequest.h">
+      <Filter>Header Files\Network\RequestDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="ListAvailableApartmentsResponse.h">
+      <Filter>Header Files\Network\ResponseDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="RentRequest.h">
+      <Filter>Header Files\Network\RequestDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="RentResponse.h">
+      <Filter>Header Files\Network\ResponseDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="ListRealtorsRequest.h">
+      <Filter>Header Files\Network\RequestDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="RentRoomEnum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ListClientsRequest.h">
+      <Filter>Header Files\Network\RequestDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="ListClientsResponse.h">
+      <Filter>Header Files\Network\ResponseDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="ListRealtorsResponse.h">
+      <Filter>Header Files\Network\ResponseDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="ListApartmentsRequest.h">
+      <Filter>Header Files\Network\RequestDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="ListApartmentsResponse.h">
+      <Filter>Header Files\Network\ResponseDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="ListRealtorApartmentsRequest.h">
+      <Filter>Header Files\Network\RequestDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="ListRealtorApartmentsResponse.h">
+      <Filter>Header Files\Network\ResponseDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="DeleteApartmentRequest.h">
+      <Filter>Header Files\Network\RequestDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="DeleteClientRequest.h">
+      <Filter>Header Files\Network\RequestDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="DeleteRealtorRequest.h">
+      <Filter>Header Files\Network\RequestDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="DeleteApartmentResponse.h">
+      <Filter>Header Files\Network\ResponseDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="DeleteClientResponse.h">
+      <Filter>Header Files\Network\ResponseDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="DeleteRealtorResponse.h">
+      <Filter>Header Files\Network\ResponseDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateApartmentRequest.h">
+      <Filter>Header Files\Network\RequestDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateClientRequest.h">
+      <Filter>Header Files\Network\RequestDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateRealtorRequest.h">
+      <Filter>Header Files\Network\RequestDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdateApartmentRequest.h">
+      <Filter>Header Files\Network\RequestDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdateClientRequest.h">
+      <Filter>Header Files\Network\RequestDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdateRealtorRequest.h">
+      <Filter>Header Files\Network\RequestDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateApartmentResponse.h">
+      <Filter>Header Files\Network\ResponseDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateClientResponse.h">
+      <Filter>Header Files\Network\ResponseDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateRealtorResponse.h">
+      <Filter>Header Files\Network\ResponseDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdateApartmentResponse.h">
+      <Filter>Header Files\Network\ResponseDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdateClientResponse.h">
+      <Filter>Header Files\Network\ResponseDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdateRealtorResponse.h">
+      <Filter>Header Files\Network\ResponseDataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="Admin.h">
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map.html">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\qwebchannel.js">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

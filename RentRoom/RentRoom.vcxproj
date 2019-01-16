@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B12702AD-ABFB-343A-A199-8E24837244A3}</ProjectGuid>
+    <Keyword>Qt4VSv1.0</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">
+    <QtMsBuild>$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;Qt5Locationd.lib;Qt5Networkd.lib;Qt5WebChanneld.lib;Qt5WebEngined.lib;Qt5WebEngineCored.lib;Qt5WebEngineWidgetsd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <QtMoc>
+      <OutputFile>.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <IncludePath>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets;%(AdditionalIncludeDirectories)</IncludePath>
+      <Define>UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB;%(PreprocessorDefinitions)</Define>
+    </QtMoc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.\GeneratedFiles\ui_%(Filename).h</OutputFile>
+    </QtUic>
+    <QtRcc>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.\GeneratedFiles\qrc_%(Filename).cpp</OutputFile>
+    </QtRcc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat />
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;Qt5Location.lib;Qt5Network.lib;Qt5WebChannel.lib;Qt5WebEngine.lib;Qt5WebEngineCore.lib;Qt5WebEngineWidgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <QtMoc>
+      <OutputFile>.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <IncludePath>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets;%(AdditionalIncludeDirectories)</IncludePath>
+      <Define>UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB;%(PreprocessorDefinitions)</Define>
+    </QtMoc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.\GeneratedFiles\ui_%(Filename).h</OutputFile>
+    </QtUic>
+    <QtRcc>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.\GeneratedFiles\qrc_%(Filename).cpp</OutputFile>
+    </QtRcc>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Admin.cpp" />
+    <ClCompile Include="AdminScreen.cpp" />
+    <ClCompile Include="AdminState.cpp" />
+    <ClCompile Include="ApartmentViewer.cpp" />
+    <ClCompile Include="ApartmentViewersContainter.cpp" />
+    <ClCompile Include="AuthenticationMethodUIElement.cpp" />
+    <ClCompile Include="Client.cpp" />
+    <ClCompile Include="ClientViewer.cpp" />
+    <ClCompile Include="ClientScreen.cpp" />
+    <ClCompile Include="ClientState.cpp" />
+    <ClCompile Include="ClientViewersContainter.cpp" />
+    <ClCompile Include="Controller.cpp" />
+    <ClCompile Include="CreateApartmentRequest.cpp" />
+    <ClCompile Include="CreateApartmentResponse.cpp" />
+    <ClCompile Include="CreateClientRequest.cpp" />
+    <ClCompile Include="CreateClientResponse.cpp" />
+    <ClCompile Include="CreateRealtorRequest.cpp" />
+    <ClCompile Include="CreateRealtorResponse.cpp" />
+    <ClCompile Include="DeleteApartmentRequest.cpp" />
+    <ClCompile Include="DeleteApartmentResponse.cpp" />
+    <ClCompile Include="DeleteClientRequest.cpp" />
+    <ClCompile Include="DeleteClientResponse.cpp" />
+    <ClCompile Include="DeleteRealtorRequest.cpp" />
+    <ClCompile Include="DeleteRealtorResponse.cpp" />
+    <ClCompile Include="ListApartmentsRequest.cpp" />
+    <ClCompile Include="ListApartmentsResponse.cpp" />
+    <ClCompile Include="ListAvailableApartmentsRequest.cpp" />
+    <ClCompile Include="ListAvailableApartmentsResponse.cpp" />
+    <ClCompile Include="ListClientsRequest.cpp" />
+    <ClCompile Include="ListClientsResponse.cpp" />
+    <ClCompile Include="ListRealtorsRequest.cpp" />
+    <ClCompile Include="ListRealtorsResponse.cpp" />
+    <ClCompile Include="LoginRequest.cpp" />
+    <ClCompile Include="LoginScreen.cpp" />
+    <ClCompile Include="LoginState.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainWindow.cpp" />
+    <ClCompile Include="MapsBridge.cpp" />
+    <ClCompile Include="MapsView.cpp" />
+    <ClCompile Include="MarkerData.cpp" />
+    <ClCompile Include="MessageBox.cpp" />
+    <ClCompile Include="NetworkManager.cpp" />
+    <ClCompile Include="NetworkURL.cpp" />
+    <ClCompile Include="Options.cpp" />
+    <ClCompile Include="PowerToolMenu.cpp" />
+    <ClCompile Include="QProgressIndicator.cpp" />
+    <ClCompile Include="Realtor.cpp" />
+    <ClCompile Include="ListRealtorApartmentsRequest.cpp" />
+    <ClCompile Include="ListRealtorApartmentsResponse.cpp" />
+    <ClCompile Include="RealtorScreen.cpp" />
+    <ClCompile Include="RealtorState.cpp" />
+    <ClCompile Include="RealtorViewer.cpp" />
+    <ClCompile Include="RealtorViewersContainer.cpp" />
+    <ClCompile Include="RentRequest.cpp" />
+    <ClCompile Include="RentResponse.cpp" />
+    <ClCompile Include="RentWidget.cpp" />
+    <ClCompile Include="Request.cpp" />
+    <ClCompile Include="Response.cpp" />
+    <ClCompile Include="RoleSelectionScreen.cpp" />
+    <ClCompile Include="RoleSelectionState.cpp" />
+    <ClCompile Include="Apartment.cpp" />
+    <ClCompile Include="SideMenu.cpp" />
+    <ClCompile Include="SignupRequest.cpp" />
+    <ClCompile Include="SignupResponse.cpp" />
+    <ClCompile Include="SignupScreen.cpp" />
+    <ClCompile Include="SignupState.cpp" />
+    <ClCompile Include="TitleBar.cpp" />
+    <ClCompile Include="UpdateApartmentRequest.cpp" />
+    <ClCompile Include="UpdateApartmentResponse.cpp" />
+    <ClCompile Include="UpdateClientRequest.cpp" />
+    <ClCompile Include="UpdateClientResponse.cpp" />
+    <ClCompile Include="UpdateRealtorRequest.cpp" />
+    <ClCompile Include="UpdateRealtorResponse.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="MainWindow.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB</Define>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="RentRoom.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RentRoom.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="TitleBar.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB</Define>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="RoleSelectionScreen.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB</Define>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="LoginScreen.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB</Define>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="ClientScreen.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB</Define>
+    </QtMoc>
+    <QtMoc Include="ClientState.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB</Define>
+    </QtMoc>
+    <QtMoc Include="MapsView.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+    </QtMoc>
+    <QtMoc Include="MapsBridge.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+    </QtMoc>
+    <QtMoc Include="NetworkManager.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+    </QtMoc>
+    <QtMoc Include="AdminState.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+    </QtMoc>
+    <QtMoc Include="AdminScreen.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+    </QtMoc>
+    <ClInclude Include="Admin.h" />
+    <QtMoc Include="ApartmentViewer.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+    </QtMoc>
+    <QtMoc Include="ApartmentViewersContainter.h" />
+    <ClInclude Include="Client.h" />
+    <QtMoc Include="ClientViewer.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+    </QtMoc>
+    <QtMoc Include="ClientViewersContainter.h" />
+    <ClInclude Include="CreateApartmentRequest.h" />
+    <ClInclude Include="CreateApartmentResponse.h" />
+    <ClInclude Include="CreateClientRequest.h" />
+    <ClInclude Include="CreateClientResponse.h" />
+    <ClInclude Include="CreateRealtorRequest.h" />
+    <ClInclude Include="CreateRealtorResponse.h" />
+    <ClInclude Include="DeleteApartmentRequest.h" />
+    <ClInclude Include="DeleteApartmentResponse.h" />
+    <ClInclude Include="DeleteClientRequest.h" />
+    <ClInclude Include="DeleteClientResponse.h" />
+    <ClInclude Include="DeleteRealtorRequest.h" />
+    <ClInclude Include="DeleteRealtorResponse.h" />
+    <ClInclude Include="ListApartmentsRequest.h" />
+    <ClInclude Include="ListApartmentsResponse.h" />
+    <ClInclude Include="ListAvailableApartmentsRequest.h" />
+    <ClInclude Include="ListAvailableApartmentsResponse.h" />
+    <ClInclude Include="ListClientsRequest.h" />
+    <ClInclude Include="ListClientsResponse.h" />
+    <ClInclude Include="ListRealtorsRequest.h" />
+    <ClInclude Include="ListRealtorsResponse.h" />
+    <ClInclude Include="LoginRequest.h" />
+    <ClInclude Include="LoginResponse.h" />
+    <ClInclude Include="MarkerData.h" />
+    <QtMoc Include="MessageBox.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+    </QtMoc>
+    <ClInclude Include="NetworkURL.h" />
+    <QtMoc Include="RealtorState.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+    </QtMoc>
+    <QtMoc Include="RealtorScreen.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+    </QtMoc>
+    <ClInclude Include="Options.h" />
+    <QtMoc Include="RentWidget.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+    </QtMoc>
+    <ClInclude Include="Apartment.h" />
+    <QtMoc Include="PowerToolMenu.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+    </QtMoc>
+    <QtMoc Include="QProgressIndicator.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+    </QtMoc>
+    <ClInclude Include="Realtor.h" />
+    <ClInclude Include="ListRealtorApartmentsRequest.h" />
+    <ClInclude Include="ListRealtorApartmentsResponse.h" />
+    <QtMoc Include="RealtorViewer.h" />
+    <QtMoc Include="RealtorViewersContainer.h" />
+    <ClInclude Include="RentRequest.h" />
+    <ClInclude Include="RentResponse.h" />
+    <ClInclude Include="RentRoomEnum.h" />
+    <ClInclude Include="Request.h" />
+    <ClInclude Include="Response.h" />
+    <QtMoc Include="SideMenu.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtWebEngineWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB;QT_WEBCHANNEL_LIB;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_WEBENGINEWIDGETS_LIB</Define>
+    </QtMoc>
+    <ClInclude Include="SignupRequest.h" />
+    <ClInclude Include="SignupResponse.h" />
+    <ClInclude Include="UpdateApartmentRequest.h" />
+    <ClInclude Include="UpdateApartmentResponse.h" />
+    <ClInclude Include="UpdateClientRequest.h" />
+    <ClInclude Include="UpdateClientResponse.h" />
+    <ClInclude Include="UpdateRealtorRequest.h" />
+    <ClInclude Include="UpdateRealtorResponse.h" />
+    <ClInclude Include="UserRole.h" />
+    <QtMoc Include="AuthenticationMethodUIElement.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB</Define>
+    </QtMoc>
+    <QtMoc Include="SignupState.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB</Define>
+    </QtMoc>
+    <QtMoc Include="LoginState.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB</Define>
+    </QtMoc>
+    <QtMoc Include="RoleSelectionState.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB</Define>
+    </QtMoc>
+    <QtMoc Include="Controller.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB</Define>
+    </QtMoc>
+    <QtMoc Include="SignupScreen.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtLocation;$(QTDIR)\include\QtNetwork</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_LOCATION_LIB;QT_NETWORK_LIB</Define>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map.html" />
+    <None Include="Resources\qwebchannel.js" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties MocDir=".\GeneratedFiles\$(ConfigurationName)" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" lupdateOptions="" lupdateOnBuild="0" lreleaseOptions="" Qt5Version_x0020_x64="msvc2017_64" MocOptions="" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

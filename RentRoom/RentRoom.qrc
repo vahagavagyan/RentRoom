@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/images">
+        <file alias="skyline">Resources/skyline.png</file>
+        <file alias="user">Resources/user.png</file>
+        <file alias="close">Resources/close.png</file>
+        <file alias="maximize">Resources/maximize.png</file>
+        <file alias="minimize">Resources/minimize.png</file>
+        <file alias="admin">Resources/admin.png</file>
+        <file alias="client">Resources/client.png</file>
+        <file alias="realtor">Resources/realtor.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>Resources/map.html</file>
+        <file>Resources/qwebchannel.js</file>
+        <file>Resources/yellow_marker.png</file>
+    </qresource>
+</RCC>
